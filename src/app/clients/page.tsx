@@ -3,21 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Клиенти — КОНФЕРЕНЦИЯ БГ",
-  description: "Нашите доверени клиенти и партньори. Конференция БГ работи с водещи организации и компании.",
+  title: "Clients — CONFERENCE BG",
+  description: "Our trusted clients and partners. Conference BG works with leading organisations and companies.",
 };
 
 const clients = [
-  { file: "mosv.jpg", alt: "МОСВ" },
+  { file: "mosv.jpg", alt: "MOSV" },
   { file: "sofia-ring.jpg", alt: "Sofia Ring Mall" },
-  { file: "nsa.jpg", alt: "НСА" },
+  { file: "nsa.jpg", alt: "NSA" },
   { file: "Erasmus.jpg", alt: "Erasmus+" },
   { file: "City-hotel.jpg", alt: "City Hotel" },
   { file: "crxr.jpg", alt: "CRXR" },
-  { file: "dlo.jpg", alt: "Дентално лазерно общество" },
+  { file: "dlo.jpg", alt: "Dental Laser Society" },
   { file: "DMI.jpg", alt: "DMI Development" },
   { file: "dream-trips.jpg", alt: "Dream Trips" },
-  { file: "fed-na-zemedelieto.jpg", alt: "Федерация на земеделието" },
+  { file: "fed-na-zemedelieto.jpg", alt: "Federation of Agriculture" },
   { file: "FES.jpg", alt: "Friedrich Ebert Stiftung" },
   { file: "forteam.jpg", alt: "Forteam" },
   { file: "haycad.jpg", alt: "Haycad" },
@@ -26,27 +26,27 @@ const clients = [
   { file: "krassi.jpg", alt: "Krassi" },
   { file: "marginalia.jpg", alt: "Marginalia" },
   { file: "car-of-the-year.jpg", alt: "Car of the Year" },
-  { file: "ncoz.jpg", alt: "НЦОЗ" },
-  { file: "nsoijp.jpg", alt: "НСОИЙП" },
+  { file: "ncoz.jpg", alt: "NCOZ" },
+  { file: "nsoijp.jpg", alt: "NSOIJP" },
   { file: "zara-lab.jpg", alt: "ZARA Lab" },
   { file: "bit.jpg", alt: "BIT" },
-  { file: "vakanzia-bg.jpg", alt: "Ваканция БГ" },
+  { file: "vakanzia-bg.jpg", alt: "Vakanzia BG" },
   { file: "Travel-time-BG.jpg", alt: "Travel Time BG" },
-  { file: "saiuz-na-stopanskata-iniciativa.jpg", alt: "Съюз на Стопанската Инициатива" },
-  { file: "ruse.jpg", alt: "Русе" },
+  { file: "saiuz-na-stopanskata-iniciativa.jpg", alt: "Union of Economic Initiative" },
+  { file: "ruse.jpg", alt: "Ruse" },
   { file: "Puressentiel.jpg", alt: "Puressentiel" },
-  { file: "parketen-sviat.jpg", alt: "Паркетен свят" },
+  { file: "parketen-sviat.jpg", alt: "Parquet World" },
   { file: "one-architecture-week.jpg", alt: "One Architecture Week" },
   { file: "olaf.jpg", alt: "OLAF" },
 ];
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "SOUND SYSTEM", href: "/services/sound-system" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
+  { name: "MULTIMEDIA", href: "/services/multimedia" },
+  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
+  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
+  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
 ];
 
 export default function ClientsPage() {
@@ -56,14 +56,14 @@ export default function ClientsPage() {
       <section className="relative overflow-hidden">
         <Image
           src="/header-clients.jpg"
-          alt="Клиенти"
+          alt="Clients"
           fill
           className="object-cover object-center"
           priority
         />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">КЛИЕНТИ</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">CLIENTS</h1>
         </div>
       </section>
 
@@ -97,7 +97,7 @@ export default function ClientsPage() {
             <aside className="lg:w-52 shrink-0">
               <div className="bg-[#f3f3f3] px-6 py-4">
                 <h3 className="text-base font-bold text-dark uppercase border-b-2 border-black pb-2 mb-3 pl-1">
-                  УСЛУГИ
+                  SERVICES
                 </h3>
                 <nav className="space-y-0">
                   {sidebar.map((item) => (

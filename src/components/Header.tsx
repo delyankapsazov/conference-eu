@@ -6,20 +6,20 @@ import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 const services = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "SOUND SYSTEM", href: "/services/sound-system" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
+  { name: "MULTIMEDIA", href: "/services/multimedia" },
+  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
+  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
+  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
 ];
 
 const navLinks = [
-  { name: "НАЧАЛО", href: "/" },
-  { name: "ЗА НАС", href: "/za-nas" },
-  { name: "УСЛУГИ", href: "/uslugi", hasDropdown: true },
-  { name: "КЛИЕНТИ", href: "/klienti" },
-  { name: "КОНТАКТИ", href: "/kontakti" },
+  { name: "HOME", href: "/" },
+  { name: "ABOUT US", href: "/about" },
+  { name: "SERVICES", href: "/services", hasDropdown: true },
+  { name: "CLIENTS", href: "/clients" },
+  { name: "CONTACT", href: "/contact" },
 ];
 
 export default function Header() {
@@ -95,7 +95,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/logo.png"
-                alt="Конференция БГ"
+                alt="Conference BG"
                 width={140}
                 height={66}
                 className="h-12 w-auto"
@@ -111,7 +111,7 @@ export default function Header() {
                     <button
                       onClick={() => setDropdownOpen(!dropdownOpen)}
                       className={`flex items-center gap-1 px-4 py-2 text-lg font-semibold tracking-wide transition-colors ${
-                        pathname.startsWith("/uslugi")
+                        pathname.startsWith("/services")
                           ? activeColor
                           : `${linkColor} ${linkHover}`
                       }`}
@@ -129,10 +129,10 @@ export default function Header() {
                     {dropdownOpen && (
                       <div className="absolute top-full left-0 mt-1 w-64 bg-white shadow-xl border-t-2 border-red py-2">
                         <Link
-                          href="/uslugi"
+                          href="/services"
                           className="block px-4 py-2 text-sm font-semibold text-dark hover:bg-gray-50 hover:text-red transition-colors"
                         >
-                          ВСИЧКИ УСЛУГИ
+                          ALL SERVICES
                         </Link>
                         <div className="border-t border-gray-100 my-1" />
                         {services.map((s) => (
@@ -210,10 +210,10 @@ export default function Header() {
                     {mobileServicesOpen && (
                       <div className="pl-4 space-y-1">
                         <Link
-                          href="/uslugi"
+                          href="/services"
                           className="block px-3 py-2 text-sm text-dark/70 hover:text-red transition-colors"
                         >
-                          ВСИЧКИ УСЛУГИ
+                          ALL SERVICES
                         </Link>
                         {services.map((s) => (
                           <Link

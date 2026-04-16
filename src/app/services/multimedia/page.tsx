@@ -3,48 +3,48 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Мултимедия — КОНФЕРЕНЦИЯ БГ",
-  description: "DLP проектори с висока резолюция, прожекционни екрани и професионален софтуер за визуални решения.",
+  title: "Multimedia — CONFERENCE BG",
+  description: "High-resolution DLP projectors, projection screens and professional software for visual solutions.",
 };
 
 const sections = [
   {
-    title: "Мултимедийни проектори",
+    title: "Multimedia Projectors",
     description:
-      "Мултимедийни проектори с DLP технология осигуряваща изключително чиста картина с висока резолюция и перфектен фокус. Зрителят може да се наслади на картината от 25% до 40% по-близко разстояние пред екрана поради липсата на пикселизация за разлика от обикновените проектори. Наситено черно и високите нива на контраст правят картината по-жива и по-реална.",
+      "Multimedia projectors with DLP technology providing an exceptionally clean image with high resolution and perfect focus. The viewer can enjoy the image from 25% to 40% closer to the screen due to the absence of pixelation compared to ordinary projectors. Rich blacks and high contrast levels make the image more vivid and lifelike.",
     image: "/img4.2.jpg",
   },
   {
-    title: "Прожекционни екрани",
+    title: "Projection Screens",
     description:
-      "Прожекционни екрани с различна големина и технология предотвратяваща загуби на светлина и отразяване.",
+      "Projection screens of various sizes with technology that prevents light loss and reflections.",
     image: "/img4.3.jpg",
   },
   {
-    title: "Професионален софтуер",
+    title: "Professional Software",
     description:
-      "Професионален софтуер предлагащ богат набор от опции за прожектиране: картина в картина, прожектиране от различен ъгъл, разполовяване на картина от два или повече източника с цел уголемяване на изображението, прожектиране върху неравни повърхности или така наречения мапинг и много други",
+      "Professional software offering a rich set of projection options: picture-in-picture, projection from different angles, splitting the image from two or more sources to enlarge it, projection onto uneven surfaces (so-called mapping), and much more.",
     image: "/img4.2.jpg",
   },
 ];
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "SOUND SYSTEM", href: "/services/sound-system" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
+  { name: "MULTIMEDIA", href: "/services/multimedia" },
+  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
+  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
+  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
 ];
 
-export default function MultimediyaPage() {
+export default function MultimediaPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header3.jpg" alt="Мултимедия" fill className="object-cover object-center" priority />
+        <Image src="/header3.jpg" alt="Multimedia" fill className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">МУЛТИМЕДИЯ</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">MULTIMEDIA</h1>
         </div>
       </section>
 
@@ -84,7 +84,7 @@ export default function MultimediyaPage() {
             <aside className="lg:w-64 shrink-0">
               <div className="bg-[#f3f3f3] px-6 py-4">
                 <h3 className="text-base font-bold text-dark uppercase border-b-2 border-black pb-2 mb-3 pl-1">
-                  УСЛУГИ
+                  SERVICES
                 </h3>
                 <nav className="space-y-0">
                   {sidebar.map((item) => (

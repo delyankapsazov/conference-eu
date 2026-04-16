@@ -3,17 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Услуги — КОНФЕРЕНЦИЯ БГ",
-  description: "Пълен набор от услуги за техническо обезпечаване — озвучаване, симултанен превод, мултимедия, осветление, тур гайд и стрийминг.",
+  title: "Services — CONFERENCE BG",
+  description: "Full range of technical support services — sound systems, simultaneous translation, multimedia, lighting, tour guide and streaming.",
 };
 
 const services = [
-  { title: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane", image: "/blurb01.jpg" },
-  { title: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya", image: "/blurb03.jpg" },
-  { title: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema", image: "/blurb001.jpg" },
-  { title: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod", image: "/blurb02.jpg" },
-  { title: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie", image: "/blurb04.jpg" },
-  { title: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming", image: "/blurb06.jpg" },
+  { title: "SOUND SYSTEM", href: "/services/sound-system", image: "/blurb01.jpg" },
+  { title: "MULTIMEDIA", href: "/services/multimedia", image: "/blurb03.jpg" },
+  { title: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system", image: "/blurb001.jpg" },
+  { title: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation", image: "/blurb02.jpg" },
+  { title: "DESIGN & LIGHTING", href: "/services/design-and-lighting", image: "/blurb04.jpg" },
+  { title: "RECORDING & STREAMING", href: "/services/recording-and-streaming", image: "/blurb06.jpg" },
 ];
 
 export default function ServicesPage() {
@@ -23,14 +23,14 @@ export default function ServicesPage() {
       <section className="relative overflow-hidden">
         <Image
           src="/header7.jpg"
-          alt="Услуги"
+          alt="Services"
           fill
           className="object-cover object-center"
           priority
         />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">УСЛУГИ</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">SERVICES</h1>
         </div>
       </section>
 
@@ -49,6 +49,7 @@ export default function ServicesPage() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>

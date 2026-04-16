@@ -3,42 +3,42 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Симултанен превод — КОНФЕРЕНЦИЯ БГ",
-  description: "Професионални цифрови системи за симултанен превод Bosch и Sennheiser с перфектно качество на звука.",
+  title: "Simultaneous Translation — CONFERENCE BG",
+  description: "Professional digital simultaneous interpretation systems by Bosch and Sennheiser with perfect sound quality.",
 };
 
 const sections = [
   {
-    title: "Професионални цифрови системи",
+    title: "Professional Digital Systems",
     description:
-      "Предлагаме професионални цифрови системи за симултанен превод на фирмите Bosch и Sennheiser с перфектно качество на звука.",
+      "We offer professional digital simultaneous interpretation systems by Bosch and Sennheiser with perfect sound quality.",
     image: "/img3.1-min.jpg",
   },
   {
-    title: "Кабина симултанен превод",
+    title: "Interpreter Booth",
     description:
-      "За качествен симултанен превод ви предлагаме кабина с вградена звукоизолация.",
+      "For high-quality simultaneous interpretation we offer a booth with built-in soundproofing.",
     image: "/img3.3-min.jpg",
   },
 ];
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "SOUND SYSTEM", href: "/services/sound-system" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
+  { name: "MULTIMEDIA", href: "/services/multimedia" },
+  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
+  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
+  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
 ];
 
-export default function SimultanenPrevodPage() {
+export default function SimultaneousTranslationPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header2-min.jpg" alt="Симултанен превод" fill className="object-cover object-center" priority />
+        <Image src="/header2-min.jpg" alt="Simultaneous Translation" fill className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">СИМУЛТАНЕН ПРЕВОД</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">SIMULTANEOUS TRANSLATION</h1>
         </div>
       </section>
 
@@ -49,9 +49,9 @@ export default function SimultanenPrevodPage() {
             {/* Main content */}
             <div className="lg:flex-1">
               <p className="text-base sm:text-lg text-gray-800 leading-relaxed mb-10">
-                <strong>Симултанен превод</strong> се използва при международни обществени, културни и други събития.
-                Извършва се едновременно с изказването на оратора. За него е необходимо специално
-                техническо оборудване за преводачите и за слушателите.
+                <strong>Simultaneous interpretation</strong> is used at international public, cultural and other events.
+                It is performed concurrently with the speaker&apos;s address. It requires specialised
+                technical equipment for both interpreters and listeners.
               </p>
               <div className="grid gap-12">
                 {sections.map((section, i) => (
@@ -83,7 +83,7 @@ export default function SimultanenPrevodPage() {
             <aside className="lg:w-64 shrink-0">
               <div className="bg-[#f3f3f3] px-6 py-4">
                 <h3 className="text-base font-bold text-dark uppercase border-b-2 border-black pb-2 mb-3 pl-1">
-                  УСЛУГИ
+                  SERVICES
                 </h3>
                 <nav className="space-y-0">
                   {sidebar.map((item) => (

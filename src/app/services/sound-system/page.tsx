@@ -3,54 +3,54 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Озвучаване — КОНФЕРЕНЦИЯ БГ",
-  description: "Професионални озвучителни системи, дискусионни и безжични микрофони, аудио миксери за всякакъв тип събития.",
+  title: "Sound System — CONFERENCE BG",
+  description: "Professional sound systems, discussion and wireless microphones, audio mixers for all types of events.",
 };
 
 const sections = [
   {
-    title: "Озвучителни тела",
+    title: "Loudspeaker Systems",
     description:
-      "Високо технологични озвучителни тела, които гарантират възпроизвеждането на всеки звук и мощност според големината на събитието и броя на аудиторията",
+      "High-technology loudspeaker systems that guarantee the reproduction of every sound and power level according to the size of the event and the number of attendees.",
     image: "/img2.1.jpg",
   },
   {
-    title: "Дискусионни микрофони",
+    title: "Discussion Microphones",
     description:
-      "Надеждна система от чувствителни микрофони със стилен дизайн и лесно управление. Председателският микрофон позволява пълен контрол над дискусията",
+      "A reliable system of sensitive microphones with elegant design and easy control. The chairman microphone allows full control over the discussion.",
     image: "/img2.2.jpg",
   },
   {
-    title: "Безжични микрофони",
+    title: "Wireless Microphones",
     description:
-      "Безжични микрофони и микрофони тип брошка предлагащи комфорт и качествен звук",
+      "Wireless microphones and lapel microphones offering comfort and high-quality sound.",
     image: "/img2.3.jpg",
   },
   {
-    title: "Аудио миксери",
+    title: "Audio Mixers",
     description:
-      "Аудио миксери с различен брой микрофонни канали, мощни предусилватели и вградени ефекти за балансирана звукова картина",
+      "Audio mixers with various numbers of microphone channels, powerful pre-amplifiers and built-in effects for a balanced sound picture.",
     image: "/img2.4.jpg",
   },
 ];
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "SOUND SYSTEM", href: "/services/sound-system" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
+  { name: "MULTIMEDIA", href: "/services/multimedia" },
+  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
+  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
+  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
 ];
 
-export default function OzvuchavanePage() {
+export default function SoundSystemPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header1.jpg" alt="Озвучаване" fill className="object-cover object-center" priority />
+        <Image src="/header1.jpg" alt="Sound System" fill className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">ОЗВУЧАВАНЕ</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">SOUND SYSTEM</h1>
         </div>
       </section>
 
@@ -90,7 +90,7 @@ export default function OzvuchavanePage() {
             <aside className="lg:w-64 shrink-0">
               <div className="bg-[#f3f3f3] px-6 py-4">
                 <h3 className="text-base font-bold text-dark uppercase border-b-2 border-black pb-2 mb-3 pl-1">
-                  УСЛУГИ
+                  SERVICES
                 </h3>
                 <nav className="space-y-0">
                   {sidebar.map((item) => (

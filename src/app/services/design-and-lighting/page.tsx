@@ -3,40 +3,40 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Запис и стрийминг — КОНФЕРЕНЦИЯ БГ",
-  description: "Аудио и видео запис на събития, както и предаване на живо до широк кръг от хора в цял свят.",
+  title: "Design & Lighting — CONFERENCE BG",
+  description: "Stage design, custom stage backdrops and impressive intelligent lighting for a modern visual impact.",
 };
 
 const sections = [
   {
-    title: "Запис",
-    description: "Аудио и видео запис на събития с професионална техника.",
-    image: "/img6.2.jpg",
+    title: "Stage Design",
+    description: "Custom stage backdrops, podiums and 3D design.",
+    image: "/img5.1.jpg",
   },
   {
-    title: "Стрийминг",
-    description: "Възможност за предаване на събитието на живо до широк кръг от хора в цял свят",
-    image: "/img6.2.jpg",
+    title: "Impressive Lighting",
+    description: "Various models of intelligent lighting contributing to a modern visual impact and a distinctive style.",
+    image: "/img5.2.jpg",
   },
 ];
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "SOUND SYSTEM", href: "/services/sound-system" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
+  { name: "MULTIMEDIA", href: "/services/multimedia" },
+  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
+  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
+  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
 ];
 
-export default function ZapisIStriymingPage() {
+export default function DesignAndLightingPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header6.jpg" alt="Запис и стрийминг" fill className="object-cover object-center" priority />
+        <Image src="/header4.jpg" alt="Design & Lighting" fill className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">ЗАПИС И СТРИЙМИНГ</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">DESIGN &amp; LIGHTING</h1>
         </div>
       </section>
 
@@ -71,7 +71,7 @@ export default function ZapisIStriymingPage() {
             <aside className="lg:w-64 shrink-0">
               <div className="bg-[#f3f3f3] px-6 py-4">
                 <h3 className="text-base font-bold text-dark uppercase border-b-2 border-black pb-2 mb-3 pl-1">
-                  УСЛУГИ
+                  SERVICES
                 </h3>
                 <nav className="space-y-0">
                   {sidebar.map((item) => (

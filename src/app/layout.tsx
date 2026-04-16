@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "КОНФЕРЕНЦИЯ БГ — Професионално техническо обезпечаване",
+  title: "CONFERENCE BG — Professional Technical Support",
   description:
-    "Konferencia.BG предлага професионално техническо обезпечаване на конференции, конгреси, работни срещи и симпозиуми — озвучаване, симултанен превод, мултимедия и още.",
+    "Conference BG provides professional technical support for conferences, congresses, working meetings and symposiums — sound systems, simultaneous translation, multimedia and more.",
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="bg" className="h-full antialiased">
+    <html lang="en" className="h-full antialiased" data-scroll-behavior="smooth">
       <body className="min-h-full flex flex-col font-cuprum">
         <Header />
         <main className="flex-1">{children}</main>

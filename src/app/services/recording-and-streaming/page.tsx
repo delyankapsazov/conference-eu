@@ -3,40 +3,40 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Дизайн и осветление — КОНФЕРЕНЦИЯ БГ",
-  description: "Сценичен дизайн, изработка на гърбове на сцени и ефектно интелигентно осветление за модерна визия.",
+  title: "Recording & Streaming — CONFERENCE BG",
+  description: "Audio and video recording of events, as well as live broadcasting to a wide audience worldwide.",
 };
 
 const sections = [
   {
-    title: "Сценичен дизайн",
-    description: "Изработка на гърбове на сцени, катедри и 3D дизайн",
-    image: "/img5.1.jpg",
+    title: "Recording",
+    description: "Audio and video recording of events with professional equipment.",
+    image: "/img6.2.jpg",
   },
   {
-    title: "Ефектно осветление",
-    description: "Различни модели интелигентно осветление допринасящи за модерна визия и характерен стил",
-    image: "/img5.2.jpg",
+    title: "Streaming",
+    description: "Live broadcasting of your event to a wide audience anywhere in the world.",
+    image: "/img6.2.jpg",
   },
 ];
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "SOUND SYSTEM", href: "/services/sound-system" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
+  { name: "MULTIMEDIA", href: "/services/multimedia" },
+  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
+  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
+  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
 ];
 
-export default function DizainIOsvetleniePage() {
+export default function RecordingAndStreamingPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header4.jpg" alt="Дизайн и осветление" fill className="object-cover object-center" priority />
+        <Image src="/header6.jpg" alt="Recording & Streaming" fill className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">ДИЗАЙН И ОСВЕТЛЕНИЕ</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">RECORDING &amp; STREAMING</h1>
         </div>
       </section>
 
@@ -71,7 +71,7 @@ export default function DizainIOsvetleniePage() {
             <aside className="lg:w-64 shrink-0">
               <div className="bg-[#f3f3f3] px-6 py-4">
                 <h3 className="text-base font-bold text-dark uppercase border-b-2 border-black pb-2 mb-3 pl-1">
-                  УСЛУГИ
+                  SERVICES
                 </h3>
                 <nav className="space-y-0">
                   {sidebar.map((item) => (
