@@ -22,6 +22,16 @@ const navLinks = [
   { name: "CONTACT", href: "/contact" },
 ];
 
+function BulgarianFlag() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" className="w-5 h-auto" aria-hidden="true" style={{ outline: "1px solid #00000033", outlineOffset: "-1px" }}>
+      <rect width="3" height="2" fill="#fff" />
+      <rect width="3" height="1" y="0.667" fill="#00966E" />
+      <rect width="3" height="0.667" y="1.333" fill="#D62612" />
+    </svg>
+  );
+}
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -165,14 +175,36 @@ export default function Header() {
                   </Link>
                 )
               )}
+              {/* Language switcher — Bulgarian */}
+              <a
+                href="https://konferencia.bg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-4 py-2 text-lg font-semibold tracking-wide transition-colors text-dark hover:text-red"
+                title="Български"
+              >
+                <BulgarianFlag />
+                <span>BG</span>
+              </a>
             </nav>
 
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 text-dark"
-              aria-label="Toggle menu"
-            >
+            {/* Mobile: language switcher + burger */}
+            <div className="lg:hidden flex items-center gap-2">
+              <a
+                href="https://konferencia.bg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 p-2 text-base font-semibold transition-colors text-dark hover:text-red"
+                title="Български"
+              >
+                <BulgarianFlag />
+                <span>BG</span>
+              </a>
+              <button
+                onClick={() => setMobileOpen(!mobileOpen)}
+                className="p-2 text-dark"
+                aria-label="Toggle menu"
+              >
               {mobileOpen ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -182,7 +214,8 @@ export default function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               )}
-            </button>
+              </button>
+            </div>
           </div>
         </div>
 
