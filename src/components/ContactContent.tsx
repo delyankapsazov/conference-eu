@@ -37,7 +37,7 @@ const contactCards = [
   },
 ];
 
-export default function ContactPage() {
+export default function ContactContent() {
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e: FormEvent) {
@@ -48,7 +48,7 @@ export default function ContactPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header9.jpg" alt="Contact" fill className="object-cover object-center" priority />
+        <Image src="/header9.jpg" alt="Contact" fill sizes="100vw" className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/65" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">CONTACT</h1>

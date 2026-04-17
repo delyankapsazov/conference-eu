@@ -3,48 +3,58 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Multimedia — CONFERENCE BG",
-  description: "High-resolution DLP projectors, projection screens and professional software for visual solutions.",
+  title: "Sound System",
+  description: "Professional sound systems, discussion and wireless microphones, audio mixers for all types of events.",
+  openGraph: {
+    title: "Sound System | Conference BG",
+    description: "Professional sound systems, discussion and wireless microphones, audio mixers for all types of events.",
+  },
 };
 
 const sections = [
   {
-    title: "Multimedia Projectors",
+    title: "Loudspeaker Systems",
     description:
-      "Multimedia projectors with DLP technology providing an exceptionally clean image with high resolution and perfect focus. The viewer can enjoy the image from 25% to 40% closer to the screen due to the absence of pixelation compared to ordinary projectors. Rich blacks and high contrast levels make the image more vivid and lifelike.",
-    image: "/img4.2.jpg",
+      "High-technology loudspeaker systems that guarantee the reproduction of every sound and power level according to the size of the event and the number of attendees.",
+    image: "/img2.1.jpg",
   },
   {
-    title: "Projection Screens",
+    title: "Discussion Microphones",
     description:
-      "Projection screens of various sizes with technology that prevents light loss and reflections.",
-    image: "/img4.3.jpg",
+      "A reliable system of sensitive microphones with elegant design and easy control. The chairman microphone allows full control over the discussion.",
+    image: "/img2.2.jpg",
   },
   {
-    title: "Professional Software",
+    title: "Wireless Microphones",
     description:
-      "Professional software offering a rich set of projection options: picture-in-picture, projection from different angles, splitting the image from two or more sources to enlarge it, projection onto uneven surfaces (so-called mapping), and much more.",
-    image: "/img4.2.jpg",
+      "Wireless microphones and lapel microphones offering comfort and high-quality sound.",
+    image: "/img2.3.jpg",
+  },
+  {
+    title: "Audio Mixers",
+    description:
+      "Audio mixers with various numbers of microphone channels, powerful pre-amplifiers and built-in effects for a balanced sound picture.",
+    image: "/img2.4.jpg",
   },
 ];
 
 const sidebar = [
-  { name: "SOUND SYSTEM", href: "/services/sound-system" },
-  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
-  { name: "MULTIMEDIA", href: "/services/multimedia" },
-  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
-  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
-  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
+  { name: "SOUND SYSTEM", href: "/озвучаване" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/симултанен-превод" },
+  { name: "MULTIMEDIA", href: "/мултимедия" },
+  { name: "DESIGN & LIGHTING", href: "/дизайн-и-осветление" },
+  { name: "TOUR GUIDE SYSTEM", href: "/тур-гайд-система" },
+  { name: "RECORDING & STREAMING", href: "/запис-и-стрийминг" },
 ];
 
-export default function MultimediaPage() {
+export default function SoundSystemPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header3.jpg" alt="Multimedia" fill className="object-cover object-center" priority />
+        <Image src="/header1.jpg" alt="Sound System" fill sizes="100vw" className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">MULTIMEDIA</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">SOUND SYSTEM</h1>
         </div>
       </section>
 
@@ -65,11 +75,12 @@ export default function MultimediaPage() {
                         src={section.image}
                         alt={section.title}
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
                       />
                     </div>
                     <div className="md:w-1/2">
-                      <h3 className="text-2xl font-bold text-dark mb-4 uppercase">
+                      <h3 className="text-2xl font-bold text-dark mb-4 uppercase relative">
                         <span className="inline-block w-5 h-0.5 bg-red mr-2 translate-y-[-3px]" />
                         {section.title}
                       </h3>

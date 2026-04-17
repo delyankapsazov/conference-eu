@@ -3,40 +3,44 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Design & Lighting — CONFERENCE BG",
-  description: "Stage design, custom stage backdrops and impressive intelligent lighting for a modern visual impact.",
+  title: "Recording & Streaming",
+  description: "Audio and video recording of events, as well as live broadcasting to a wide audience worldwide.",
+  openGraph: {
+    title: "Recording & Streaming | Conference BG",
+    description: "Audio and video recording of events, as well as live broadcasting to a wide audience worldwide.",
+  },
 };
 
 const sections = [
   {
-    title: "Stage Design",
-    description: "Custom stage backdrops, podiums and 3D design.",
-    image: "/img5.1.jpg",
+    title: "Recording",
+    description: "Audio and video recording of events with professional equipment.",
+    image: "/img6.2.jpg",
   },
   {
-    title: "Impressive Lighting",
-    description: "Various models of intelligent lighting contributing to a modern visual impact and a distinctive style.",
-    image: "/img5.2.jpg",
+    title: "Streaming",
+    description: "Live broadcasting of your event to a wide audience anywhere in the world.",
+    image: "/img6.2.jpg",
   },
 ];
 
 const sidebar = [
-  { name: "SOUND SYSTEM", href: "/services/sound-system" },
-  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
-  { name: "MULTIMEDIA", href: "/services/multimedia" },
-  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
-  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
-  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
+  { name: "SOUND SYSTEM", href: "/озвучаване" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/симултанен-превод" },
+  { name: "MULTIMEDIA", href: "/мултимедия" },
+  { name: "DESIGN & LIGHTING", href: "/дизайн-и-осветление" },
+  { name: "TOUR GUIDE SYSTEM", href: "/тур-гайд-система" },
+  { name: "RECORDING & STREAMING", href: "/запис-и-стрийминг" },
 ];
 
-export default function DesignAndLightingPage() {
+export default function RecordingAndStreamingPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header4.jpg" alt="Design & Lighting" fill className="object-cover object-center" priority />
+        <Image src="/header6.jpg" alt="Recording & Streaming" fill sizes="100vw" className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">DESIGN &amp; LIGHTING</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">RECORDING &amp; STREAMING</h1>
         </div>
       </section>
 
@@ -53,7 +57,7 @@ export default function DesignAndLightingPage() {
                     className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-center`}
                   >
                     <div className="md:w-1/2 relative aspect-[4/3] w-full shadow-[0_0_7px_0_rgba(0,0,0,0.5)] overflow-hidden">
-                      <Image src={section.image} alt={section.title} fill className="object-cover" />
+                      <Image src={section.image} alt={section.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                     </div>
                     <div className="md:w-1/2">
                       <h3 className="text-2xl font-bold text-dark mb-4 uppercase">

@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const services = [
-  { title: "SOUND SYSTEM", href: "/services/sound-system", image: "/blurb01.jpg" },
-  { title: "MULTIMEDIA", href: "/services/multimedia", image: "/blurb03.jpg" },
-  { title: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system", image: "/blurb001.jpg" },
-  { title: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation", image: "/blurb02.jpg" },
-  { title: "DESIGN & LIGHTING", href: "/services/design-and-lighting", image: "/blurb04.jpg" },
-  { title: "RECORDING & STREAMING", href: "/services/recording-and-streaming", image: "/blurb06.jpg" },
+  { title: "SOUND SYSTEM", href: "/озвучаване", image: "/blurb01.jpg" },
+  { title: "MULTIMEDIA", href: "/мултимедия", image: "/blurb03.jpg" },
+  { title: "TOUR GUIDE SYSTEM", href: "/тур-гайд-система", image: "/blurb001.jpg" },
+  { title: "SIMULTANEOUS TRANSLATION", href: "/симултанен-превод", image: "/blurb02.jpg" },
+  { title: "DESIGN & LIGHTING", href: "/дизайн-и-осветление", image: "/blurb04.jpg" },
+  { title: "RECORDING & STREAMING", href: "/запис-и-стрийминг", image: "/blurb06.jpg" },
 ];
 
 const features = [
@@ -49,6 +49,7 @@ export default function HomePage() {
           src="/header1.jpg"
           alt="Conference BG — technical support"
           fill
+          sizes="100vw"
           className="object-cover object-center"
           priority
         />
@@ -145,6 +146,7 @@ export default function HomePage() {
           src="/header3.jpg"
           alt="Conference"
           fill
+          sizes="100vw"
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/60" />

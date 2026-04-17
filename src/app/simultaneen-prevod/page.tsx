@@ -3,40 +3,46 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Recording & Streaming — CONFERENCE BG",
-  description: "Audio and video recording of events, as well as live broadcasting to a wide audience worldwide.",
+  title: "Simultaneous Translation",
+  description: "Professional digital simultaneous interpretation systems by Bosch and Sennheiser with perfect sound quality.",
+  openGraph: {
+    title: "Simultaneous Translation | Conference BG",
+    description: "Professional digital simultaneous interpretation systems by Bosch and Sennheiser with perfect sound quality.",
+  },
 };
 
 const sections = [
   {
-    title: "Recording",
-    description: "Audio and video recording of events with professional equipment.",
-    image: "/img6.2.jpg",
+    title: "Professional Digital Systems",
+    description:
+      "We offer professional digital simultaneous interpretation systems by Bosch and Sennheiser with perfect sound quality.",
+    image: "/img3.1-min.jpg",
   },
   {
-    title: "Streaming",
-    description: "Live broadcasting of your event to a wide audience anywhere in the world.",
-    image: "/img6.2.jpg",
+    title: "Interpreter Booth",
+    description:
+      "For high-quality simultaneous interpretation we offer a booth with built-in soundproofing.",
+    image: "/img3.3-min.jpg",
   },
 ];
 
 const sidebar = [
-  { name: "SOUND SYSTEM", href: "/services/sound-system" },
-  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
-  { name: "MULTIMEDIA", href: "/services/multimedia" },
-  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
-  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
-  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
+  { name: "SOUND SYSTEM", href: "/озвучаване" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/симултанен-превод" },
+  { name: "MULTIMEDIA", href: "/мултимедия" },
+  { name: "DESIGN & LIGHTING", href: "/дизайн-и-осветление" },
+  { name: "TOUR GUIDE SYSTEM", href: "/тур-гайд-система" },
+  { name: "RECORDING & STREAMING", href: "/запис-и-стрийминг" },
 ];
 
-export default function RecordingAndStreamingPage() {
+export default function SimultaneousTranslationPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header6.jpg" alt="Recording & Streaming" fill className="object-cover object-center" priority />
+        <Image src="/header2-min.jpg" alt="Simultaneous Translation" fill sizes="100vw" className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">RECORDING &amp; STREAMING</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">SIMULTANEOUS TRANSLATION</h1>
         </div>
       </section>
 
@@ -46,6 +52,11 @@ export default function RecordingAndStreamingPage() {
 
             {/* Main content */}
             <div className="lg:flex-1">
+              <p className="text-base sm:text-lg text-gray-800 leading-relaxed mb-10">
+                <strong>Simultaneous interpretation</strong> is used at international public, cultural and other events.
+                It is performed concurrently with the speaker&apos;s address. It requires specialised
+                technical equipment for both interpreters and listeners.
+              </p>
               <div className="grid gap-12">
                 {sections.map((section, i) => (
                   <div
@@ -53,7 +64,13 @@ export default function RecordingAndStreamingPage() {
                     className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-center`}
                   >
                     <div className="md:w-1/2 relative aspect-[4/3] w-full shadow-[0_0_7px_0_rgba(0,0,0,0.5)] overflow-hidden">
-                      <Image src={section.image} alt={section.title} fill className="object-cover" />
+                      <Image
+                        src={section.image}
+                        alt={section.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover"
+                      />
                     </div>
                     <div className="md:w-1/2">
                       <h3 className="text-2xl font-bold text-dark mb-4 uppercase">

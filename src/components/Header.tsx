@@ -6,20 +6,20 @@ import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 const services = [
-  { name: "SOUND SYSTEM", href: "/services/sound-system" },
-  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
-  { name: "MULTIMEDIA", href: "/services/multimedia" },
-  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
-  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
-  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
+  { name: "SOUND SYSTEM", href: "/озвучаване" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/симултанен-превод" },
+  { name: "MULTIMEDIA", href: "/мултимедия" },
+  { name: "DESIGN & LIGHTING", href: "/дизайн-и-осветление" },
+  { name: "TOUR GUIDE SYSTEM", href: "/тур-гайд-система" },
+  { name: "RECORDING & STREAMING", href: "/запис-и-стрийминг" },
 ];
 
 const navLinks = [
   { name: "HOME", href: "/" },
-  { name: "ABOUT US", href: "/about" },
-  { name: "SERVICES", href: "/services", hasDropdown: true },
-  { name: "CLIENTS", href: "/clients" },
-  { name: "CONTACT", href: "/contact" },
+  { name: "ABOUT US", href: "/за-нас" },
+  { name: "SERVICES", href: "/услуги", hasDropdown: true },
+  { name: "CLIENTS", href: "/клиенти" },
+  { name: "CONTACT", href: "/контакти" },
 ];
 
 function BulgarianFlag() {
@@ -121,7 +121,7 @@ export default function Header() {
                     <button
                       onClick={() => setDropdownOpen(!dropdownOpen)}
                       className={`flex items-center gap-1 px-4 py-2 text-lg font-semibold tracking-wide transition-colors ${
-                        pathname.startsWith("/services")
+                        pathname === "/услуги" || services.some(s => pathname === s.href)
                           ? activeColor
                           : `${linkColor} ${linkHover}`
                       }`}
@@ -139,7 +139,7 @@ export default function Header() {
                     {dropdownOpen && (
                       <div className="absolute top-full left-0 mt-1 w-64 bg-white shadow-xl border-t-2 border-red py-2">
                         <Link
-                          href="/services"
+                          href="/услуги"
                           className="block px-4 py-2 text-sm font-semibold text-dark hover:bg-gray-50 hover:text-red transition-colors"
                         >
                           ALL SERVICES
@@ -243,7 +243,7 @@ export default function Header() {
                     {mobileServicesOpen && (
                       <div className="pl-4 space-y-1">
                         <Link
-                          href="/services"
+                          href="/услуги"
                           className="block px-3 py-2 text-sm text-dark/70 hover:text-red transition-colors"
                         >
                           ALL SERVICES

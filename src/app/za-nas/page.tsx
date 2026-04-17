@@ -3,17 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us — CONFERENCE BG",
+  title: "About Us",
   description: "Learn more about Conference BG — professional technical support for conferences and congress events.",
+  openGraph: {
+    title: "About Us | Conference BG",
+    description: "Learn more about Conference BG — professional technical support for conferences and congress events.",
+  },
 };
 
 const sidebar = [
-  { name: "SOUND SYSTEM", href: "/services/sound-system" },
-  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
-  { name: "MULTIMEDIA", href: "/services/multimedia" },
-  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
-  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
-  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
+  { name: "SOUND SYSTEM", href: "/озвучаване" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/симултанен-превод" },
+  { name: "MULTIMEDIA", href: "/мултимедия" },
+  { name: "DESIGN & LIGHTING", href: "/дизайн-и-осветление" },
+  { name: "TOUR GUIDE SYSTEM", href: "/тур-гайд-система" },
+  { name: "RECORDING & STREAMING", href: "/запис-и-стрийминг" },
 ];
 
 export default function AboutPage() {
@@ -25,6 +29,7 @@ export default function AboutPage() {
           src="/header8.jpg"
           alt="About Us"
           fill
+          sizes="100vw"
           className="object-cover object-center"
           priority
         />
@@ -62,6 +67,7 @@ export default function AboutPage() {
                   src="/about-img.jpg"
                   alt="Conference BG"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 75vw"
                   className="object-cover"
                 />
               </div>

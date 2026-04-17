@@ -3,8 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Clients — CONFERENCE BG",
+  title: "Clients",
   description: "Our trusted clients and partners. Conference BG works with leading organisations and companies.",
+  openGraph: {
+    title: "Clients | Conference BG",
+    description: "Our trusted clients and partners. Conference BG works with leading organisations and companies.",
+  },
 };
 
 const clients = [
@@ -41,12 +45,12 @@ const clients = [
 ];
 
 const sidebar = [
-  { name: "SOUND SYSTEM", href: "/services/sound-system" },
-  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
-  { name: "MULTIMEDIA", href: "/services/multimedia" },
-  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
-  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
-  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
+  { name: "SOUND SYSTEM", href: "/озвучаване" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/симултанен-превод" },
+  { name: "MULTIMEDIA", href: "/мултимедия" },
+  { name: "DESIGN & LIGHTING", href: "/дизайн-и-осветление" },
+  { name: "TOUR GUIDE SYSTEM", href: "/тур-гайд-система" },
+  { name: "RECORDING & STREAMING", href: "/запис-и-стрийминг" },
 ];
 
 export default function ClientsPage() {
@@ -58,6 +62,7 @@ export default function ClientsPage() {
           src="/header-clients.jpg"
           alt="Clients"
           fill
+          sizes="100vw"
           className="object-cover object-center"
           priority
         />
@@ -85,6 +90,7 @@ export default function ClientsPage() {
                         src={`/clients/${client.file}`}
                         alt={client.alt}
                         fill
+                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                         className="object-contain"
                       />
                     </div>

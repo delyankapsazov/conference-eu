@@ -5,10 +5,10 @@ import { usePathname } from "next/navigation";
 
 const footerLinks = [
   { name: "HOME", href: "/" },
-  { name: "ABOUT US", href: "/about" },
-  { name: "SERVICES", href: "/services" },
-  { name: "CLIENTS", href: "/clients" },
-  { name: "CONTACT", href: "/contact" },
+  { name: "ABOUT US", href: "/за-нас" },
+  { name: "SERVICES", href: "/услуги" },
+  { name: "CLIENTS", href: "/клиенти" },
+  { name: "CONTACT", href: "/контакти" },
 ];
 
 export default function Footer() {
@@ -41,7 +41,7 @@ export default function Footer() {
       <div className="bg-[#1a1a1a]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
           <p className="text-center text-sm text-gray-400">
-            &copy; All rights reserved CONFERENCE BG | Designed by Alpha Best
+            &copy; All rights reserved Konferencia.BG | Designed by Alpha Best
           </p>
         </div>
       </div>

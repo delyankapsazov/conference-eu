@@ -3,24 +3,28 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Tour Guide System — CONFERENCE BG",
+  title: "Tour Guide System",
   description: "Compact and lightweight multi-channel tour guide system with wide range. Battery life up to 20 hours.",
+  openGraph: {
+    title: "Tour Guide System | Conference BG",
+    description: "Compact and lightweight multi-channel tour guide system with wide range. Battery life up to 20 hours.",
+  },
 };
 
 const sidebar = [
-  { name: "SOUND SYSTEM", href: "/services/sound-system" },
-  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
-  { name: "MULTIMEDIA", href: "/services/multimedia" },
-  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
-  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
-  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
+  { name: "SOUND SYSTEM", href: "/озвучаване" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/симултанен-превод" },
+  { name: "MULTIMEDIA", href: "/мултимедия" },
+  { name: "DESIGN & LIGHTING", href: "/дизайн-и-осветление" },
+  { name: "TOUR GUIDE SYSTEM", href: "/тур-гайд-система" },
+  { name: "RECORDING & STREAMING", href: "/запис-и-стрийминг" },
 ];
 
 export default function TourGuideSystemPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header001.jpg" alt="Tour Guide System" fill className="object-cover object-center" priority />
+        <Image src="/header001.jpg" alt="Tour Guide System" fill sizes="100vw" className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">TOUR GUIDE SYSTEM</h1>
@@ -35,7 +39,7 @@ export default function TourGuideSystemPage() {
             <div className="lg:flex-1">
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <div className="md:w-1/2 relative aspect-[4/3] w-full shadow-[0_0_7px_0_rgba(0,0,0,0.5)] overflow-hidden">
-                  <Image src="/img6.1.jpg" alt="Tour Guide System" fill className="object-cover" />
+                  <Image src="/img6.1.jpg" alt="Tour Guide System" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                 </div>
                 <div className="md:w-1/2">
                   <h3 className="text-2xl font-bold text-dark mb-4 uppercase">

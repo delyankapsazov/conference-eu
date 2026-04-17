@@ -3,42 +3,52 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Simultaneous Translation — CONFERENCE BG",
-  description: "Professional digital simultaneous interpretation systems by Bosch and Sennheiser with perfect sound quality.",
+  title: "Multimedia",
+  description: "High-resolution DLP projectors, projection screens and professional software for visual solutions.",
+  openGraph: {
+    title: "Multimedia | Conference BG",
+    description: "High-resolution DLP projectors, projection screens and professional software for visual solutions.",
+  },
 };
 
 const sections = [
   {
-    title: "Professional Digital Systems",
+    title: "Multimedia Projectors",
     description:
-      "We offer professional digital simultaneous interpretation systems by Bosch and Sennheiser with perfect sound quality.",
-    image: "/img3.1-min.jpg",
+      "Multimedia projectors with DLP technology providing an exceptionally clean image with high resolution and perfect focus. The viewer can enjoy the image from 25% to 40% closer to the screen due to the absence of pixelation compared to ordinary projectors. Rich blacks and high contrast levels make the image more vivid and lifelike.",
+    image: "/img4.2.jpg",
   },
   {
-    title: "Interpreter Booth",
+    title: "Projection Screens",
     description:
-      "For high-quality simultaneous interpretation we offer a booth with built-in soundproofing.",
-    image: "/img3.3-min.jpg",
+      "Projection screens of various sizes with technology that prevents light loss and reflections.",
+    image: "/img4.3.jpg",
+  },
+  {
+    title: "Professional Software",
+    description:
+      "Professional software offering a rich set of projection options: picture-in-picture, projection from different angles, splitting the image from two or more sources to enlarge it, projection onto uneven surfaces (so-called mapping), and much more.",
+    image: "/img4.2.jpg",
   },
 ];
 
 const sidebar = [
-  { name: "SOUND SYSTEM", href: "/services/sound-system" },
-  { name: "SIMULTANEOUS TRANSLATION", href: "/services/simultaneous-translation" },
-  { name: "MULTIMEDIA", href: "/services/multimedia" },
-  { name: "DESIGN & LIGHTING", href: "/services/design-and-lighting" },
-  { name: "TOUR GUIDE SYSTEM", href: "/services/tour-guide-system" },
-  { name: "RECORDING & STREAMING", href: "/services/recording-and-streaming" },
+  { name: "SOUND SYSTEM", href: "/озвучаване" },
+  { name: "SIMULTANEOUS TRANSLATION", href: "/симултанен-превод" },
+  { name: "MULTIMEDIA", href: "/мултимедия" },
+  { name: "DESIGN & LIGHTING", href: "/дизайн-и-осветление" },
+  { name: "TOUR GUIDE SYSTEM", href: "/тур-гайд-система" },
+  { name: "RECORDING & STREAMING", href: "/запис-и-стрийминг" },
 ];
 
-export default function SimultaneousTranslationPage() {
+export default function MultimediaPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header2-min.jpg" alt="Simultaneous Translation" fill className="object-cover object-center" priority />
+        <Image src="/header3.jpg" alt="Multimedia" fill sizes="100vw" className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">SIMULTANEOUS TRANSLATION</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">MULTIMEDIA</h1>
         </div>
       </section>
 
@@ -48,11 +58,6 @@ export default function SimultaneousTranslationPage() {
 
             {/* Main content */}
             <div className="lg:flex-1">
-              <p className="text-base sm:text-lg text-gray-800 leading-relaxed mb-10">
-                <strong>Simultaneous interpretation</strong> is used at international public, cultural and other events.
-                It is performed concurrently with the speaker&apos;s address. It requires specialised
-                technical equipment for both interpreters and listeners.
-              </p>
               <div className="grid gap-12">
                 {sections.map((section, i) => (
                   <div
@@ -64,6 +69,7 @@ export default function SimultaneousTranslationPage() {
                         src={section.image}
                         alt={section.title}
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
                       />
                     </div>
